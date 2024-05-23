@@ -1,0 +1,36 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LifoCollections
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import LifoCollections
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct Stack<Element> {
+  public init(_ elements: [Element] = [])
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public mutating func push(_ element: Element)
+  @discardableResult
+  public mutating func pop() -> Element?
+  public func top() -> Element?
+}
+public struct StackStatistics<Element> where Element : Swift.Comparable {
+  public init(_ elements: [Element] = [])
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public mutating func push(_ element: Element)
+  @discardableResult
+  public mutating func pop() -> Element?
+  public func top() -> Element?
+  public func minimumElement() -> Element?
+}

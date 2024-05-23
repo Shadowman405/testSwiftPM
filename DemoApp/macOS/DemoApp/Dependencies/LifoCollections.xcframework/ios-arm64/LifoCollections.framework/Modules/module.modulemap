@@ -1,0 +1,11 @@
+framework module LifoCollections {
+  umbrella header "LifoCollections.h"
+  export *
+
+  module * { export * }
+}
+
+module LifoCollections.Swift {
+  header "LifoCollections-Swift.h"
+  requires objc
+}
