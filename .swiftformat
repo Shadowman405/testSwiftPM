@@ -89,7 +89,6 @@
 --enable preferKeyPath
 --enable redundantBackticks
 --enable redundantBreak
- @@ -109,28 +110,28 @@
 --enable redundantOptionalBinding
 --enable redundantParens
 --enable redundantPattern
